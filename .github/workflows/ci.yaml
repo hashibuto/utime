@@ -15,8 +15,7 @@ jobs:
         fetch-depth: 0
 
     - name: check code formatting
-      run: |
-        make format
+      run: make check-format
 
     - name: get version
       uses: hashibuto/actions/version@version-v0

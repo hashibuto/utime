@@ -11,3 +11,7 @@ test:
 .PHONY: format
 test:
 	$(RUN_CARGO) fmt
+
+.PHONY: check-format
+check-format: format
+	git status | grep "nothing to commit"
