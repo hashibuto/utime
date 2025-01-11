@@ -9,9 +9,9 @@ test:
 	$(RUN_CARGO) test
 
 .PHONY: format
-test:
+format:
 	$(RUN_CARGO) fmt
 
 .PHONY: check-format
-check-format: format
-	git status | grep "nothing to commit"
+check-format:
+	$(RUN_CARGO) fmt --check
